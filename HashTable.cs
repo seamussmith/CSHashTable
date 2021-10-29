@@ -40,7 +40,7 @@ public class HashTable<TKey, TValue>
         public TValue? Value { get; init; }
         public HashTableEntry(TKey key, TValue value)
             => (Key, Value) = (key, value);
-        // If you use this constructor for anything else other than LinkedList.Find() I will kill you
+        // Only use for comparing keys
         public HashTableEntry(TKey key)
             => Key = key;
         public override bool Equals(object? obj)
